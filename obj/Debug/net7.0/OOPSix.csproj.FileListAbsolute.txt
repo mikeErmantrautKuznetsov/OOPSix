@@ -1,0 +1,15 @@
+D:\Visual Studio\OOPSix\bin\Debug\net7.0\OOPSix.exe
+D:\Visual Studio\OOPSix\bin\Debug\net7.0\OOPSix.deps.json
+D:\Visual Studio\OOPSix\bin\Debug\net7.0\OOPSix.runtimeconfig.json
+D:\Visual Studio\OOPSix\bin\Debug\net7.0\OOPSix.dll
+D:\Visual Studio\OOPSix\bin\Debug\net7.0\OOPSix.pdb
+D:\Visual Studio\OOPSix\obj\Debug\net7.0\OOPSix.csproj.AssemblyReference.cache
+D:\Visual Studio\OOPSix\obj\Debug\net7.0\OOPSix.GeneratedMSBuildEditorConfig.editorconfig
+D:\Visual Studio\OOPSix\obj\Debug\net7.0\OOPSix.AssemblyInfoInputs.cache
+D:\Visual Studio\OOPSix\obj\Debug\net7.0\OOPSix.AssemblyInfo.cs
+D:\Visual Studio\OOPSix\obj\Debug\net7.0\OOPSix.csproj.CoreCompileInputs.cache
+D:\Visual Studio\OOPSix\obj\Debug\net7.0\OOPSix.dll
+D:\Visual Studio\OOPSix\obj\Debug\net7.0\refint\OOPSix.dll
+D:\Visual Studio\OOPSix\obj\Debug\net7.0\OOPSix.pdb
+D:\Visual Studio\OOPSix\obj\Debug\net7.0\OOPSix.genruntimeconfig.cache
+D:\Visual Studio\OOPSix\obj\Debug\net7.0\ref\OOPSix.dll

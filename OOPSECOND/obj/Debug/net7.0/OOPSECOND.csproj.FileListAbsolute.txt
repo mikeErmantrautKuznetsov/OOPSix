@@ -1,0 +1,15 @@
+D:\Visual Studio\OOPSix\OOPSECOND\bin\Debug\net7.0\OOPSECOND.exe
+D:\Visual Studio\OOPSix\OOPSECOND\bin\Debug\net7.0\OOPSECOND.deps.json
+D:\Visual Studio\OOPSix\OOPSECOND\bin\Debug\net7.0\OOPSECOND.runtimeconfig.json
+D:\Visual Studio\OOPSix\OOPSECOND\bin\Debug\net7.0\OOPSECOND.dll
+D:\Visual Studio\OOPSix\OOPSECOND\bin\Debug\net7.0\OOPSECOND.pdb
+D:\Visual Studio\OOPSix\OOPSECOND\obj\Debug\net7.0\OOPSECOND.csproj.AssemblyReference.cache
+D:\Visual Studio\OOPSix\OOPSECOND\obj\Debug\net7.0\OOPSECOND.GeneratedMSBuildEditorConfig.editorconfig
+D:\Visual Studio\OOPSix\OOPSECOND\obj\Debug\net7.0\OOPSECOND.AssemblyInfoInputs.cache
+D:\Visual Studio\OOPSix\OOPSECOND\obj\Debug\net7.0\OOPSECOND.AssemblyInfo.cs
+D:\Visual Studio\OOPSix\OOPSECOND\obj\Debug\net7.0\OOPSECOND.csproj.CoreCompileInputs.cache
+D:\Visual Studio\OOPSix\OOPSECOND\obj\Debug\net7.0\OOPSECOND.dll
+D:\Visual Studio\OOPSix\OOPSECOND\obj\Debug\net7.0\refint\OOPSECOND.dll
+D:\Visual Studio\OOPSix\OOPSECOND\obj\Debug\net7.0\OOPSECOND.pdb
+D:\Visual Studio\OOPSix\OOPSECOND\obj\Debug\net7.0\OOPSECOND.genruntimeconfig.cache
+D:\Visual Studio\OOPSix\OOPSECOND\obj\Debug\net7.0\ref\OOPSECOND.dll
