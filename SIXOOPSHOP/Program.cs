@@ -26,9 +26,16 @@
 
     class Shop
     {
-        public Dictionary<int, Product> listProductShop = new Dictionary<int, Product>();
+        private Dictionary<int, Product> listProductShop = new Dictionary<int, Product>()
+        {
+            {1, new Product("Молоко", 100)},
+            {2, new Product("Мясо", 200)},
+            {3, new Product("Шоколад", 300)},
+            {4, new Product("Сыр", 400)},
+            {5, new Product("Торт", 500)}
+        };
 
-        public void SearchProduct()
+        public void DisplayProduct()
         {
             foreach (KeyValuePair<int, Product> valuePairShop in listProductShop)
             {
@@ -38,21 +45,37 @@
                 Console.WriteLine();
             }
         }
+        public void DeletProductShop(int key)
+        {
+            listProductShop.Remove(key);
+        }
+
+        public bool TryGetProduct(int key, out Product product)
+        {
+            product = null;
+
+            if (listProductShop.ContainsKey(key))
+            {
+                product = listProductShop[key];
+                return true;
+            }
+            return false;
+        }
     }
 
-    class Bueyr
+    class Buyer
     {
-        public Dictionary<int, Product> listProductBueyr = new Dictionary<int, Product>();
-        public void SearchProduct()
+        public List<Product> listProductBueyr = new List<Product>();
+        public void DisplayProductBuyer()
         {
-            foreach (KeyValuePair<int, Product> valuePairShop in listProductBueyr)
+            foreach (Product valuePairShop in listProductBueyr)
             {
-                Console.WriteLine($"Индекс: {valuePairShop.Key}.\n" +
-                    $"Название продукта: {valuePairShop.Value.NameProduct}.\n" +
-                    $"Цена продукта: {valuePairShop.Value.SettingsPrice}.\n");
+                Console.WriteLine($"Название продукта: {valuePairShop.NameProduct}.\n" +
+                    $"Цена продукта: {valuePairShop.SettingsPrice}.\n");
                 Console.WriteLine();
             }
         }
+
     }
 
     internal class Program
@@ -60,61 +83,35 @@
         static void Main(string[] args)
         {
             Shop shop = new Shop();
-            Bueyr bueyr = new Bueyr();
-            shop.listProductShop.Add(1, new Product("Молоко", 100));
-            shop.listProductShop.Add(2, new Product("Мясо", 200));
-            shop.listProductShop.Add(3, new Product("Шоколад", 300));
-            shop.listProductShop.Add(4, new Product("Сыр", 400));
-            shop.listProductShop.Add(5, new Product("Торт", 500));
+            Buyer buyer = new Buyer();
 
             while (true)
             {
                 Console.WriteLine("Выберите команду: \n1 - показать список товара. " +
                     "\n2 - Продать товар. \n3 - Корзина покупателя.");
 
-                string inputCommand = Console.ReadLine();
-                if (int.TryParse(inputCommand, out int _inputCommand))
+                string inputCommandStr = Console.ReadLine();
+                if (int.TryParse(inputCommandStr, out int inputCommand))
                 {
-                    switch (_inputCommand)
+                    switch (inputCommand)
                     {
                         case (int)ShopProduct.ShopProduct:
-                            shop.SearchProduct();
+                            shop.DisplayProduct();
                             break;
 
                         case (int)ShopProduct.SellProduct:
-                            shop.SearchProduct();
+                            shop.DisplayProduct();
                             Console.WriteLine("Выберите товар для покупки. Введите индекс.");
                             int productChoice = Convert.ToInt32(Console.ReadLine());
-                            if (productChoice != _inputCommand || productChoice == _inputCommand)
+                            if (shop.TryGetProduct(productChoice, out Product product))
                             {
-                                if (productChoice == 1)
-                                {
-                                    bueyr.listProductBueyr.Add(productChoice, new Product("Молоко", 100));
-                                }
-
-                                if (productChoice == 2)
-                                {
-                                    bueyr.listProductBueyr.Add(productChoice, new Product("Мясо", 200));
-                                }
-
-                                if (productChoice == 3)
-                                {
-                                    bueyr.listProductBueyr.Add(productChoice, new Product("Шоколад", 300));
-                                }
-
-                                if (productChoice == 4)
-                                {
-                                    bueyr.listProductBueyr.Add(productChoice, new Product("Сыр", 400));
-                                }
-                                if (productChoice == 5)
-                                {
-                                    bueyr.listProductBueyr.Add(productChoice, new Product("Торт", 500));
-                                }
+                                buyer.listProductBueyr.Add(product);
+                                shop.DeletProductShop(productChoice);
                             }
                             break;
 
                         case (int)ShopProduct.ShowBuyProduct:
-                            bueyr.SearchProduct();
+                            buyer.DisplayProductBuyer();
                             break;
 
                         default:
